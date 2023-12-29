@@ -78,7 +78,7 @@
 					</button>
 				</div>
 			</section>
-			<section>
+			<!-- <section>
 				<div class="input-group input-group-lg">
 					<span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
 					<input
@@ -88,7 +88,25 @@
 						aria-describedby="inputGroup-sizing-lg"
 					/>
 				</div>
+			</section> -->
+			<section>
+				<form id="book-search-form" class="input-group input-group-lg">
+					<span class="input-group-text" id="inputGroup-sizing-lg"
+						>Search for you favorite books</span
+					>
+					<input
+						type="text"
+						class="form-control"
+						id="search-term"
+						aria-label="Sizing example input"
+						aria-describedby="inputGroup-sizing-lg"
+						placeholder="Enter book title, author, or genre"
+					/>
+					<button class="btn btn-primary" type="submit">Search</button>
+				</form>
+				<div id="book-results"></div>
 			</section>
+
 			<footer>text for the footer</footer>
 		</main>
 		<script
@@ -98,5 +116,6 @@
 		></script>
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="./js/script.js"></script>
+		<script src="./js/google-api-script.js"></script>
 	</body>
 </html>
