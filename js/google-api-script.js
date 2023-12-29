@@ -16,6 +16,7 @@ $("#book-search-form").submit(function (e) {
 		.then((data) => {
 			console.log(data);
 			if (data.items) {
+				$("#search-term").val("");
 				$("#book-results").empty();
 				data.items.forEach((item) => {
 					if (item.volumeInfo) {
