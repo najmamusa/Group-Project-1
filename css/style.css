@@ -1,0 +1,17 @@
+#carouselExample .carousel-item {
+	justify-content: center;
+	align-items: center;
+}
+
+#carouselExample .carousel-item img {
+	max-height: 600px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#carouselExample .carousel-item h5,
+p {
+	color: rgb(234, 9, 178);
+}
