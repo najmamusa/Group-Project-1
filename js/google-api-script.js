@@ -62,3 +62,34 @@ $("#book-search-form").submit(function (e) {
 		})
 		.catch((error) => console.error("Error:", error));
 });
+
+$(document).ready(function () {
+	function displaySearchHistory(searchHistory) {
+		let searchListItem = $(
+			'<ul class="list-group list-group-horizontal"></ul>'
+		);
+		searchHistory.forEach(function (searchTerm) {
+			searchListItem.append(
+				$('<li class="list-group-item"></li>').text(searchTerm)
+			);
+		});
+
+		$("#book-results").html(searchListItem);
+	}
+	let searchHistory =
+		JSON.parse(localStorage.getItem("bookSearchHistory")) || [];
+	displaySearchHistory(searchHistory);
+
+	$("#book-search-form").submit(function (event) {
+		event.preventDefault();
+
+		let inputValue = $("#search-term").val();
+		searchHistory.push(inputValue);
+		if (searchHistory.length > 5) {
+			searchHistory.shift();
+		}
+		localStorage.setItem("bookSearchHistory", JSON.stringify(searchHistory));
+		displaySearchHistory(searchHistory);
+		$("#search-term").val("");
+	});
+});
