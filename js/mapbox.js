@@ -4,7 +4,7 @@ mapboxgl.accessToken =
 let map = new mapboxgl.Map({
 	container: "map",
 	style: "mapbox://styles/mapbox/streets-v12",
-	center: [-0.1276, 51.5072],
+	center: [-0.121231, 51.514383],
 	zoom: 13,
 });
 
@@ -43,7 +43,7 @@ function getUserLocation() {
 
 $("#poi-search-form").submit(function (e) {
 	e.preventDefault();
-	let searchText = $("#poi-input").val().trim();
+	let searchText = $("#place-search-input").val().trim();
 	let geocodingURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
 		searchText
 	)}.json?proximity=${userLongitude},${userLatitude}&access_token=${
@@ -65,18 +65,63 @@ $("#poi-search-form").submit(function (e) {
 		.then((response) => response.json())
 		.then((data) => {
 			console.log(data);
-			$("#poi-results").empty();
+			let rowDiv = $("<div>").addClass("row");
+			$("#place-search-input").val("");
+			$("#place-search-results").empty().append(rowDiv);
 			if (data.features && data.features.length > 0) {
 				data.features.forEach((feature) => {
-					let placeName = feature.place_name || "No name available";
-					let poiDiv = $("<div>").append($("<h3>").text(placeName));
-					$("#poi-results").append(poiDiv);
+					let fullAddress = feature.place_name || "No name available";
+					let addressParts = fullAddress.split(", ");
+					let title = addressParts[0];
+					let restOfAddress = addressParts.slice(1);
 
-					var customIconMarker = createCustomIconMarker();
+					let columnDiv = $("<div>").addClass("col-md");
+					let placeResultDiv = $("<div>")
+						.addClass("card")
+						.css({ margin: "5px", width: "25rem" });
+					let cardBody = $("<div>")
+						.addClass("card-body")
+						.css({ margin: "10px" });
+					let bookstoreTitle = $("<h5>").addClass("card-title").text(title);
+					let cardAddress = $("<p>")
+						.addClass("card-text")
+						.text(restOfAddress.slice(0, -1).join(", "));
+					let cardPostcode = $("<p>")
+						.addClass("card-text")
+						.text(restOfAddress.slice(-1));
+
+					cardBody.append(bookstoreTitle, cardAddress, cardPostcode);
+					placeResultDiv.append(cardBody);
+					columnDiv.append(placeResultDiv);
+					rowDiv.append(columnDiv);
+
+					//NoTE LIST ITEM DISPLAY BELOW
+
+					// let columnDiv = $("<div>").addClass("col-sm");
+					// let placeResultDiv = $("<div>")
+					// 	.addClass("card")
+					// 	.css({ margin: "10px", width: "18rem" });
+					// let listGroup = $("<div>").addClass("list-group list-group-flush");
+					// let listItemTitle = $("<div>")
+					// 	.addClass("list-group-item")
+					// 	.text(title);
+					// let listItem1 = $("<div>")
+					// 	.addClass("list-group-item")
+					// 	.text(restOfAddress.slice(0, -1).join(", "));
+					// let listItem2 = $("<div>")
+					// 	.addClass("list-group-item")
+					// 	.text(restOfAddress.slice(-1));
+
+					// listGroup.append(listItemTitle, listItem1, listItem2);
+					// placeResultDiv.append(listGroup);
+					// columnDiv.append(placeResultDiv);
+					// rowDiv.append(columnDiv);
+
+					let customIconMarker = createCustomIconMarker();
 
 					new mapboxgl.Marker(customIconMarker)
 						.setLngLat(feature.geometry.coordinates)
-						.setPopup(new mapboxgl.Popup().setText(placeName))
+						.setPopup(new mapboxgl.Popup().setText(fullAddress))
 						.addTo(map);
 
 					map.flyTo({

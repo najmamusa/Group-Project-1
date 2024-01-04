@@ -23,20 +23,21 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/style.css" type="text/css" />
-		<title>Document</title>
+		<title>Tales & Titles</title>
 		<style>
-			#search-results {
+			/* #search-results {
 				margin-top: 20px;
 				border-top: 1px solid #ddd;
 				padding-top: 20px;
-			}
+			} */
 
 			#map {
-				position: absolute;
-				top: 300;
-				bottom: 0;
+				height: 700px;
 				width: 100%;
-				height: 50%;
+			}
+
+			.card-body {
+				padding: 0;
 			}
 		</style>
 	</head>
@@ -107,16 +108,43 @@
 		</div>
 		<div id="search-results"></div> -->
 
-		<div class="container">
+		<!-- <div class="container">
 			<form id="poi-search-form">
 				<h1>Search for a place</h1>
 				<input type="text" id="poi-input" placeholder="Search for Bookstore" />
 				<button type="submit">Search</button>
 			</form>
 			<div id="poi-results"></div>
+		</div> -->
+
+		<div class="container">
+			<div class="row mt-3">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-body btn-outline-danger">
+							<div id="map"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="container">
+						<form class="input-group" id="poi-search-form">
+							<h1>Search for a Bookstore near you</h1>
+							<input
+								type="text"
+								class="form-control"
+								type="text"
+								id="place-search-input"
+								placeholder="Search for Bookstore"
+							/>
+							<button class="btn btn-primary" type="submit">Search</button>
+						</form>
+						<div id="place-search-results"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div id="map"></div>
 		<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
 		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
 		<link
