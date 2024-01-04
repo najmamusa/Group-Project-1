@@ -21,9 +21,31 @@ $("#book-search-form").submit(function (e) {
 				data.items.forEach((item) => {
 					if (item.volumeInfo) {
 						let title = item.volumeInfo.title || "No title available";
+						let author = item.volumeInfo.authors
+							? item.volumeInfo.authors.join(", ")
+							: "Unknown author(s)";
+						let rating = item.volumeInfo.averageRating
+							? item.volumeInfo.averageRating
+							: "No rating available";
+						let releaseDate = item.volumeInfo.publishedDate
+							? item.volumeInfo.publishedDate
+							: "No published date available";
+						let pageCount = item.volumeInfo.pageCount
+							? item.volumeInfo.pageCount
+							: "No page count available";
+						let publisher = item.volumeInfo.publisher
+							? item.volumeInfo.publisher
+							: "No page count available";
+						let category = item.volumeInfo.categories
+							? item.volumeInfo.categories
+							: "No page count available";
+						// let description =
+						// 	item.searchInfo && item.searchInfo.textSnippet
+						// 		? item.searchInfo.textSnippet
+						// 		: "No description available";
 						let description =
-							item.searchInfo && item.searchInfo.textSnippet
-								? item.searchInfo.textSnippet
+							item.volumeInfo.description && item.volumeInfo.description
+								? item.volumeInfo.description
 								: "No description available";
 						let thumbnail = item.volumeInfo.imageLinks
 							? item.volumeInfo.imageLinks.smallThumbnail
@@ -38,18 +60,38 @@ $("#book-search-form").submit(function (e) {
 							.css({ "max-height": "350px", "object-fit": "contain" });
 						let cardBody = $("<div>").addClass("card-body");
 						let titleElement = $("<h5>").addClass("card-title").text(title);
-						let descriptionElement = $("<p>")
-							.addClass("card-text")
-							.text(description);
-						let linkElement = $("<a>")
-							.attr("href", item.volumeInfo.infoLink)
+						let modalTriggerButton = $("<button>")
 							.addClass("btn btn-primary")
-							.text("Learn More");
+							.attr("data-bs-toggle", "modal")
+							.attr("data-bs-target", "#bookModal")
+							.text("More Details")
+							.click(function () {
+								$("#bookModalLabel").html(title);
+								$("#bookModal #bookAuthor").html(
+									"<strong>Author</strong>: " + author
+								);
+								$("#bookModal #pageCount").html(
+									"<strong>Page Count</strong>: " + pageCount
+								);
+								$("#bookModal #publisher").html(
+									"<strong>Publisher</strong>: " + publisher
+								);
+								$("#bookModal #category").html(
+									"<strong>Category</strong>: " + category
+								);
+								$("#bookModal #releaseDate").html(
+									"<strong>Release Date</strong>: " + releaseDate
+								);
+								$("#bookModal #bookDescription").html(
+									"<strong>Description</strong>: " + description
+								);
+								$("#bookModal #bookRating").html(
+									"<strong>Rating</strong>: " + rating
+								);
+								$("#bookModal #bookImage").attr("src", thumbnail);
+							});
 
-						cardBody.append(titleElement);
-						cardBody.append(imgElement);
-						cardBody.append(descriptionElement);
-						cardBody.append(linkElement);
+						cardBody.append(titleElement, imgElement, modalTriggerButton);
 
 						card.append(cardBody);
 						column.append(card);

@@ -1,60 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tales & Titles</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-			crossorigin="anonymous"
-		/>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-    </script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
-	<body>
-		<div>
-			<header role="banner">
-			  <img
-				id="logo-main"
-				src="./assets/5.jpg"
-				width="300"
-				alt="Logo Thing main logo"
-			  />
-			  <nav
-				id="navbar-primary"
-				class="navbar navbar-default"
-				role="navigation"
-			  >
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tales & Titles</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div>
+		<header role="banner">
+			<img id="logo-main" src="./assets/5.jpg" width="300" alt="Logo Thing main logo" />
+			<nav id="navbar-primary" class="navbar navbar-default" role="navigation">
 				<div class="container-fluid">
-				  <!-- Brand and toggle get grouped for better mobile display -->
-				  <div class="navbar-header">
-					<button
-					  type="button"
-					  class="navbar-toggle"
-					  data-toggle="collapse"
-					  data-target="#navbar-primary-collapse"
-					>
-					  <span class="sr-only">Toggle navigation</span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					</button>
-				  </div>
-				  <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-					<ul class="nav navbar-nav">
-					  <li class="active"><a href="index.html">Home</a></li>
-					  <!-- <li><a href="#">Link</a></li> -->
-					  <li><a href="books.html">Books</a></li>
-					  <li><a href="map.html">Bookstores</a></li>
-					  <!-- <li><a href="#">Link</a></li> -->
-					</ul>
-				  </div>
-				  <!-- /.navbar-collapse -->
-		<!-- <header>
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#navbar-primary-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="navbar-primary-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Home</a></li>
+							<!-- <li><a href="#">Link</a></li> -->
+							<li><a href="books.html">Books</a></li>
+							<li><a href="map.html">Bookstores</a></li>
+							<!-- <li><a href="#">Link</a></li> -->
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+					<!-- <header>
 			<nav class="navbar navbar-expand-lg bg-body-tertiary">
 				<div class="container-fluid">
 					<div class="navbar-brand"><img src="./assets/5.jpg" alt="" /></div>
@@ -85,36 +68,63 @@
 				</div>
 			</nav>
 		</header> -->
-		<main>
-			<section>
-				<form id="book-search-form" class="input-group input-group-lg">
-					<span class="input-group-text" id="inputGroup-sizing-lg"
-						>Search for you favorite books</span
-					>
-					<input
-						type="text"
-						class="form-control"
-						id="search-term"
-						aria-label="Sizing example input"
-						aria-describedby="inputGroup-sizing-lg"
-						placeholder="Enter book title, author, or genre"
-					/>
-					<button class="btn btn-primary" type="submit">Search</button>
-				</form>
-				<div id="book-results"></div>
-			</section>
+					<main>
+						<section>
+							<form id="book-search-form" class="input-group input-group-lg">
+								<span class="input-group-text" id="inputGroup-sizing-lg">Search for you favorite
+									books</span>
+								<input type="text" class="form-control" id="search-term"
+									aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+									placeholder="Enter book title, author, or genre" />
+								<button class="btn btn-primary" type="submit">Search</button>
+							</form>
+							<div id="book-results"></div>
+						</section>
+						<section>
 
-			<footer>text for the footer</footer>
-		</main>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-			integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-			crossorigin="anonymous"
-		></script>
-		<script src="https://code.jquery.com/jquery.js"></script>
 
-		<script src="./js/script.js"></script>
-		<script src="./js/mapbox.js"></script>
-		<script src="./js/google-api-script.js"></script>
-	</body>
+							<!-- Bootstrap Modal -->
+							<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"></div>
+							<div class="modal fade" id="bookModal" aria-labelledby="bookModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="bookModalLabel">Modal title</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal"
+												aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<img id="bookImage" src="" alt="Book Image"
+												style="max-width: 100%; height: auto;">
+											<h5 id="bookAuthor">Author: </h5>
+											<p id="bookRating">Rating: </p>
+											<p id="releaseDate">Release Date: </p>
+											<p id="category">Category: </p>
+											<p id="pageCount">Page Count: </p>
+											<p id="publisher">Publisher: </p>
+											<p id="bookDescription">Description: </p>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-bs-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+				</div>
+				</section>
+
+				<footer>text for the footer</footer>
+				</main>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+					integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+					crossorigin="anonymous"></script>
+				<script src="https://code.jquery.com/jquery.js"></script>
+
+				<script src="./js/script.js"></script>
+				<script src="./js/mapbox.js"></script>
+				<script src="./js/google-api-script.js"></script>
+</body>
+
 </html>
