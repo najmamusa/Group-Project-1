@@ -40,6 +40,10 @@ function updateCarousel(books) {
 $(document).ready(function () {
 	fetchBestsellersBooks();
 });
+// In one of your JavaScript files
+function updateCurrentYear() {
+	$("#current-year").text(new Date().getFullYear());
+}
 
 // $("#book-search-form").submit(function (e) {
 // 	e.preventDefault();

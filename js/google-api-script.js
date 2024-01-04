@@ -38,7 +38,7 @@ $("#book-search-form").submit(function (e) {
 							: "No page count available";
 						let category = item.volumeInfo.categories
 							? item.volumeInfo.categories
-							: "No page count available";
+							: "No category available";
 						// let description =
 						// 	item.searchInfo && item.searchInfo.textSnippet
 						// 		? item.searchInfo.textSnippet
