@@ -79,7 +79,7 @@
 				</div>
 			</nav>
 		</header>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row mt-3 mb-3">
 				<div class="col-md-8">
 					<div class="card">
@@ -90,17 +90,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="container">
-						<form class="input-group" id="poi-search-form">
-							<h1>Search for a Bookstore near you</h1>
-							<input
-								type="text"
-								class="form-control"
-								type="text"
-								id="place-search-input"
-								placeholder="Search for Bookstore"
-							/>
-							<button class="btn btn-primary" type="submit">Search</button>
-						</form>
+						<h3>Bookstore and Libraries near you</h3>
 						<div id="place-search-results"></div>
 					</div>
 				</div>
@@ -158,8 +148,6 @@
 		></script>
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="./js/mapbox.js"></script>
-
-		<script src="./js/script.js"></script>
 		<script>
 			$("#current-year").text(new Date().getFullYear());
 		</script>
