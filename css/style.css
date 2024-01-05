@@ -31,8 +31,7 @@ header[role="banner"] #logo-main {
 	margin-left: auto;
 	margin-right: auto;
 }
-#carouselExample .carousel-item h5,
-p {
+#carouselExample .carousel-item h5 {
 	color: rgb(234, 9, 178);
 }
 /* ===== TO FIX ==== */
@@ -49,8 +48,8 @@ p {
 	color: #efc8d4;
 }
 
-.new-york-times {
-	color: #676264;
+.colour-span {
+	color: #4f6f52;
 }
 .navbar .navbar-nav .nav-link {
 	color: #fff;
@@ -59,7 +58,7 @@ p {
 	padding-right: 0.5em;
 }
 .navbar .navbar-nav .nav-link:hover {
-	color: #efc8d4;
+	color: #eee7da;
 	opacity: 0.8;
 }
 
@@ -76,7 +75,7 @@ p {
 footer .btn {
 	border: 1px solid #4f6f52;
 	color: #4f6f52;
-	background-color: #fffaf4;
+	background-color: #eee7da;
 }
 footer .btn:hover,
 footer .nav-link:hover {
@@ -85,4 +84,49 @@ footer .nav-link:hover {
 
 footer .btn:hover {
 	background-color: #739072;
+}
+
+.custom-btn {
+	border: 1px solid #4f6f52;
+	color: #4f6f52;
+	background-color: #eee7da;
+}
+.custom-btn-form {
+	border: none;
+	color: #4f6f52;
+	background-color: #eee7da;
+}
+.custom-btn:hover,
+.custom-btn-form:hover {
+	background-color: #739072;
+	/* border: none; */
+}
+
+.custom-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+#book-search-form {
+	margin: auto;
+	padding: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	font-family: "Arial", sans-serif;
+}
+
+.input-group-text {
+	background-color: #afc8ad;
+	color: rgb(0, 0, 0);
+	border: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+	border: 2px solid #efc8d4;
+	border-left: none;
+}
+
+.form-control:focus {
+	box-shadow: 0 0 5px #efc8d4;
 }

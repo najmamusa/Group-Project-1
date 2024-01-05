@@ -116,19 +116,30 @@ $(document).ready(function () {
 
 	//note displaying clickable to display previously searched data again
 	function displaySearchHistory(searchHistory) {
-		let searchListContainer = $('<div class="search-history-container"></div>');
+		let searchListContainer = $(
+			'<div class="search-history-container d-flex flex-column align-items-center" style="min-height: 100vh;"></div>'
+		);
+
+		let buttonsContainer = $(
+			'<div class="d-flex justify-content-center flex-wrap"></div>'
+		);
 
 		searchHistory.forEach(function (searchTerm) {
-			let listItem = $('<button class="btn btn-primary m-1"></button>').text(
-				searchTerm
-			);
+			let listItem = $(
+				'<button class="btn btn-primary custom-btn m-1"></button>'
+			).text(searchTerm);
 
 			listItem.click(function () {
 				handleSearch(searchTerm);
 			});
 
-			searchListContainer.append(listItem);
+			buttonsContainer.append(listItem);
 		});
+
+		searchListContainer.append(
+			'<h1><span class="colour-span">Previous Search Queries</span> Are Displayed Below</h1>'
+		);
+		searchListContainer.append(buttonsContainer);
 
 		$("#book-results").html(searchListContainer);
 	}

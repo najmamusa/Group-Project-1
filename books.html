@@ -48,19 +48,16 @@
 	</header>
 	<main>
 		<section>
-			<form id="book-search-form" class="input-group input-group-lg">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Search for you favorite
-					books</span>
-				<input type="text" class="form-control" id="search-term" aria-label="Sizing example input"
-					aria-describedby="inputGroup-sizing-lg" placeholder="Enter book title, author, or genre" />
-				<button class="btn btn-primary " type="submit">Search</button>
-			</form>
-			<div id="book-results"></div>
-			
+			<div class=" custom-form">
+				<form id="book-search-form" class="input-group input-group-lg mt-5">
+					<span class="input-group-text" id="inputGroup-sizing-lg">Search for your favorite books</span>
+					<input type="text" class="form-control" id="search-term" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter book title, author, or genre" />
+					<button class="btn btn-primary custom-btn-form" type="submit">Search</button>
+				</form>
+			</div>
+			<div class="" id="book-results"></div>
 		</section>
 		<section>
-
-
 			<!-- Bootstrap Modal -->
 			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"></div>
 			<div class="modal fade" id="bookModal" aria-labelledby="bookModalLabel" aria-hidden="true">
@@ -79,7 +76,6 @@
 							<p id="pageCount">Page Count: </p>
 							<p id="publisher">Publisher: </p>
 							<p id="bookDescription">Description: </p>
-
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -109,7 +105,7 @@
 				</section>
 			</div>
 			<div class="text-center p-3" style="background-color: #739072">
-				<span id="current-year"></span> © Marcia. All Rights Reserved.
+				<span id="current-year"></span> © Tales & Titles. All Rights Reserved.
 			</div>
 		</footer>
 	</main>
