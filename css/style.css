@@ -35,7 +35,11 @@ header[role="banner"] #logo-main {
 p {
 	color: rgb(234, 9, 178);
 }
-
+/* ===== TO FIX ==== */
+.carousel-item .card {
+	max-width: 90%;
+}
+/* ===== ./ TO FIX ==== */
 .fa-arrow-right {
 	font-size: 2.5rem;
 	color: #efc8d4;
@@ -71,6 +75,8 @@ p {
 
 footer .btn {
 	border: 1px solid #4f6f52;
+	color: #4f6f52;
+	background-color: #fffaf4;
 }
 footer .btn:hover,
 footer .nav-link:hover {
