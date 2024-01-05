@@ -12,35 +12,44 @@
 </head>
 
 <body>
-	<div>
-		<header role="banner">
-			<img id="logo-main" src="./assets/5.jpg" width="300" alt="Logo Thing main logo" />
-			<nav id="navbar-primary" class="navbar navbar-default" role="navigation">
-				<div class="container-fluid">
-				  <!-- Brand and toggle get grouped for better mobile display -->
-				  <div class="navbar-header">
-					<button
-					  type="button"
-					  class="navbar-toggle"
-					  data-toggle="collapse"
-					  data-target="#navbar-primary-collapse"
-					>
-					  <span class="sr-only">Toggle navigation</span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					</button>
-				  </div>
-				  <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-					<ul class="nav navbar-nav">
-					  <li class="active"><a href="index.html">Home</a></li>
-					  <!-- <li><a href="#">Link</a></li> -->
-					  <li><a href="books.html">Book Search</a></li>
-					  <li><a href="map.html">Bookstores</a></li>
-					  <!-- <li><a href="#">Link</a></li> -->
-					</ul>
-				  </div>
-				  <!-- /.navbar-collapse -->
+		<div id="mainNavigation">
+			<nav role="navigation">
+			  <div class="py-3 text-center border-bottom">
+			<img
+			  src="./assets/5.jpg"
+			  width="300"
+			  alt="Logo" 
+			  class="invert"
+			/>
+			<div class="navbar-expand-md">
+				<div class="navbar-dark text-center my-2">
+				  <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+				  </button>
+				</div>
+				<div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+				  <ul class="navbar-nav mx-auto ">
+					<li class="nav-item">
+					  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="books.html">Books</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="map.html">Book Stores</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					  </li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			  </header><!-- header role="banner" -->
+		  <!-- header role="banner" -->
 		<!-- <header>
 			<nav class="navbar navbar-expand-lg bg-body-tertiary">
 				<div class="container-fluid">
@@ -119,7 +128,41 @@
 				</div>
 				</section>
 
-				<footer>text for the footer</footer>
+				<footer id="centered-footer">
+					<div class="footer-dark">
+						<footer>
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-6 col-md-3 item">
+										<h3>Services</h3>
+										<ul>
+											<li><a href="#">Web design</a></li>
+											<li><a href="#">Development</a></li>
+											<li><a href="#">Hosting</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-md-3 item">
+										<h3>About</h3>
+										<ul>
+											<li><a href="#">Company</a></li>
+											<li><a href="#">Team</a></li>
+											<li><a href="#">Careers</a></li>
+										</ul>
+									</div>
+									<div class="col-md-6 item text">
+										<h3>Tales & Titles</h3>
+										<p>
+											Embark on a personalized literary journey with Tales and Titles, your trusted companion for tailored book recommendations. Born from a love of storytelling, our online haven connects readers with the perfect read, carefully curated by our team of book enthusiasts. Whether you're a seasoned reader or a novice, let Tales and Titles guide you through the enchanting world of stories, where each tale has its unique title waiting to be explored. Happy reading!
+										</p>
+									</div>
+									<div class="col item social"><a href="https://github.com/najmamusa/Group-Project-1" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+								</div>
+								<p class="copyright">Tales & Titles © 2023</p>
+							</div>
+						</footer>
+					</div>
+				</footer>
+			</div>
 				</main>
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
 					integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
