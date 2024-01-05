@@ -25,12 +25,6 @@
 		<link rel="stylesheet" href="./css/style.css" type="text/css" />
 		<title>Tales & Titles</title>
 		<style>
-			/* #search-results {
-				margin-top: 20px;
-				border-top: 1px solid #ddd;
-				padding-top: 20px;
-			} */
-
 			#map {
 				height: 700px;
 				width: 100%;
@@ -43,9 +37,19 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<nav
+				class="navbar navbar-expand-lg navbar-dark"
+				style="background-color: #88ab8e"
+			>
 				<div class="container-fluid">
-					<!-- <div class="navbar-brand"><img src="./assets/5.jpg" alt="" /></div> -->
+					<a class="navbar-brand" href="#">
+						<img
+							id="logo-main"
+							src="./assets/group-logo-z-2.png"
+							width="175"
+							alt="Logo Thing main logo"
+						/>
+					</a>
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -58,67 +62,25 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
+						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="index.html">HOME</a>
+								<a class="nav-link active" aria-current="page" href="index.html"
+									>Home</a
+								>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="index.html">BOOK Search</a>
+								<a class="nav-link" href="books.html">Book Search</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="map.html">BOOK STORE</a>
+								<a class="nav-link" href="map.html">Book Stores</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
-		<!-- <div
-			class="modal fade"
-			id="placeModal"
-			tabindex="-1"
-			aria-labelledby="placeModalLabel"
-			aria-hidden="true"
-		>
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="placeModalLabel">Place Name</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"
-						></button>
-					</div>
-					<div class="modal-body">
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-		<!-- <div class="container">
-			<form id="book-search-form">
-				<input type="text" id="search-title" placeholder="Title" />
-				<input type="text" id="search-author" placeholder="Author" />
-				<input type="text" id="search-genre" placeholder="Genre" />
-				<input type="text" id="search-year" placeholder="Year" />
-				<button type="submit">Search</button>
-			</form>
-		</div>
-		<div id="search-results"></div> -->
-
-		<!-- <div class="container">
-			<form id="poi-search-form">
-				<h1>Search for a place</h1>
-				<input type="text" id="poi-input" placeholder="Search for Bookstore" />
-				<button type="submit">Search</button>
-			</form>
-			<div id="poi-results"></div>
-		</div> -->
-
 		<div class="container">
-			<div class="row mt-3">
+			<div class="row mt-3 mb-3">
 				<div class="col-md-8">
 					<div class="card">
 						<div class="card-body btn-outline-danger">
@@ -144,6 +106,43 @@
 				</div>
 			</div>
 		</div>
+		<footer
+			class="text-center text-lg-start text-white"
+			style="background-color: #88ab8e"
+		>
+			<div class="container p-4 pb-0">
+				<section class="container-fluid mb-4 text-center">
+					<p class="d-flex justify-content-center align-items-center">
+						<span class="me-3">Search for your favorite books</span>
+						<button
+							type="button"
+							class="btn btn-outline-light btn-rounded me-3"
+						>
+							<a class="nav-link" href="books.html">Book Search</a>
+						</button>
+
+						<a
+							class="btn btn-outline-light btn-floating m-1 me-3"
+							href="#!"
+							role="button"
+						>
+							<i class="fa fa-external-link"></i>
+						</a>
+
+						<a
+							class="btn btn-outline-light btn-floating m-1"
+							href="#!"
+							role="button"
+						>
+							<i class="fab fa-github"></i>
+						</a>
+					</p>
+				</section>
+			</div>
+			<div class="text-center p-3" style="background-color: #739072">
+				<span id="current-year"></span> © Marcia. All Rights Reserved.
+			</div>
+		</footer>
 
 		<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
 		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
@@ -161,5 +160,8 @@
 		<script src="./js/mapbox.js"></script>
 
 		<script src="./js/script.js"></script>
+		<script>
+			$("#current-year").text(new Date().getFullYear());
+		</script>
 	</body>
 </html>
