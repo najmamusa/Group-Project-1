@@ -26,11 +26,19 @@ function updateCarousel(books) {
 		}
 		let carouselItem = $(`
             <div class="carousel-item ${isActive}">
-                <img src="${book.book_image}" class="d-block w-100" alt="${book.title}" />
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>${book.title}</h5>
-                    <p>${book.description}</p>
-                </div>
+			<div class="row align-items-center g-0">
+			<div class="col-md-6">
+				<img src="${book.book_image}" class="d-block w-100" alt="${book.title}" />
+			</div>
+			<div class="col-md-6 d-flex align-items-center">
+				<div class="card ">
+					<div class="card-body">
+						<h5 class="card-title">${book.title}</h5>
+						<p class="card-text">${book.description}</p>
+					</div>
+				</div>
+			</div>
+		</div>
             </div>
         `);
 
