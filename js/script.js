@@ -48,7 +48,7 @@ function updateCarousel(books) {
 
 //note fetching the bestsellers on page load
 $(document).ready(function () {
-	fetchBestsellersBooks();
+	// fetchBestsellersBooks();
 });
 //note DISPLAYING CURRENT YEAR VIA DATE.js
 function updateCurrentYear() {
