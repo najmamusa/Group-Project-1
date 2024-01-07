@@ -91,7 +91,7 @@ height: auto;
   height: 93px;
   padding: 2rem 0;
   margin: 0 auto 2rem;
-  position: relative; top: 55px;
+  position: relative; top: 45px;
 
 }
 .input {
@@ -152,36 +152,30 @@ height: auto;
 Home Slider
 ==================================== */
 
-.slider-wrapper div {position: relative;}
-.slider-wrapper {margin-top: 5vw;  margin-left: 11vw;}
-.slide-image {height: 24vw;}
-.slide-image img {width: 24vw; cursor: pointer;}
-.slide-content {width: 25vw; color: #fff; padding:3vw 18vw 3vw 9vw;}
-.slide-date {color: #0a8acb; font-size: 1.1vw; font-weight: 400; letter-spacing: 0.1vw; padding-bottom: 1.4vw;}
-.slide-title {font-size: 1.2vw; font-weight: 400; letter-spacing: 0.1vw; line-height: 1.55vw; padding-bottom: 1.8vw;}
-.slide-text {font-size: 0.80vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;}
-.slide-more {font-weight: 400; letter-spacing: 0.1vw; float: left; font-size: 0.9vw;}
-.slide-bullet {width: 0.5vw; height: 0.5vw; background-color: #0b8bcc; border-radius: 200%; position: relative; margin-left: 1.2vw;}
-.slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
-
-div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
-div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
-
-.arrows{width: 3.5vw; margin-top: -5.8vw; margin-left: 72vw; position: relative;}
-.arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; background: transparent; text-indent: -9999px; border-top: 0.15vw solid #fff; border-left: 0.15vw solid #fff; transition: all .1s ease-in-out; text-decoration: none; color: transparent;
+#carouselExample .carousel-item {
+	justify-content: center;
+	align-items: center;
 }
-.arrow:hover {border-color: #0A8ACB; border-width: 0.25vw;
+
+#carouselExample .carousel-item img {
+	max-height: 600px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
-.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
-.arrow.prev {transform: rotate(-45deg); left: 0;}
-.arrow.next {transform: rotate(135deg); right: 0;}
+#carouselExample .carousel-item h5,
+p {
+  font-family: 'Raleway', sans-serif;
+}
 
 /* SEARCH BAR BOOKS PAGE */
 
 
    .footer-dark {
     padding:50px 0;
-    color:#f0f9ff;
+    color:#303639;
     background-color: lightgrey;
   }
   
