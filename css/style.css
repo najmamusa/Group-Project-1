@@ -6,8 +6,6 @@ General Styles
 /* body {
   background-color: #fff;
 } */ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');body {background-color: #0D1B2B; overflow-x: hidden; font-family: roboto; -webkit-font-smoothing: antialiased; margin: 0;}
-.flex { display: -webkit-flex; display: flex; -webkit-flex-direction: row;  flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start;}
 
 .page-wrap {
   width: 100%;
@@ -74,7 +72,7 @@ height: auto;
   height: 180px;
   line-height: 125%;
   align-content: center;
-  color: #333333;
+  color: #1b1b1b;
   margin: 0 auto;
   position: relative; bottom: 40px;
 }
@@ -91,7 +89,7 @@ height: auto;
   height: 93px;
   padding: 2rem 0;
   margin: 0 auto 2rem;
-  position: relative; top: 45px;
+  position: relative; top: 40px;
 
 }
 .input {
@@ -105,49 +103,15 @@ height: auto;
 }
 
 /* BOOK SEARCH SECTION */
-.searchbar{
-  margin-bottom: auto;
-  margin-top: auto;
-  height: 60px;
-  background-color: #353b48;
-  border-radius: 30px;
-  padding: 10px;
-  }
 
-  .search_input{
-  color: white;
-  border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  caret-color:transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-  }
+  
+  
+ 
 
-  .searchbar:hover > .search_input{
-  padding: 0 10px;
-  width: 450px;
-  caret-color:red;
-  transition: width 0.4s linear;
-  }
 
-  .searchbar:hover > .search_icon{
-  background: white;
-  color: #e74c3c;
-  }
 
-  .search_icon{
-  height: 40px;
-  width: 40px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color:white;
-  text-decoration:none;
-  }
+ 
+  
 /* ====================================
 Home Slider
 ==================================== */
@@ -168,6 +132,46 @@ Home Slider
 #carouselExample .carousel-item h5,
 p {
   font-family: 'Raleway', sans-serif;
+}
+
+/* ABOUT US */
+
+.logo-small {
+  color: #f4511e;
+  font-size: 50px;
+}
+
+.logo {
+  color: #f4511e;
+  font-size: 200px;
+}
+
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181;
+}
+
+.jumbotron {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 /* SEARCH BAR BOOKS PAGE */

@@ -1,6 +1,7 @@
 function fetchBestsellersBooks() {
 	let apiKey = "2S2xIryPnZ6hWb0XnN6SXQmaZWOa6XAa";
 	let url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${apiKey}`;
+	
 
 	fetch(url)
 		.then((response) => response.json())
@@ -36,7 +37,6 @@ function updateCarousel(books) {
 		carouselContainer.append(carouselItem);
 	});
 }
-
 $(document).ready(function () {
 	fetchBestsellersBooks();
 });
@@ -54,8 +54,6 @@ var mySwiper = new Swiper(".swiper-container", {
 	mousewheelControl: 1
   });
 
-
-  
 
 // $("#book-search-form").submit(function (e) {
 // 	e.preventDefault();
