@@ -9,7 +9,7 @@ $("#book-search-form").submit(function (e) {
 
 	let queryURL = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
 		searchTermValue
-	)}&key=AIzaSyBG54r1IMAcrbAdHjU8BR_otxstaWVMF-8`;
+	)}&key=AIzaSyBOi-evldG0DPPR_6ytMDMrUo6egMqyykc`;
 
 	fetch(queryURL)
 		.then((response) => response.json())

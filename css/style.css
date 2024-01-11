@@ -129,11 +129,30 @@ Home Slider
 	margin-left: auto;
 	margin-right: auto;
 }
-#carouselExample .carousel-item h5,
-p {
+#carouselExample .carousel-item h5, p {
   font-family: 'Raleway', sans-serif;
+  color: #303639;
+  margin-bottom: 50px;
+}
+.carousel-caption {
+  margin-top: 20px; /* Adjust the margin-top value to move the description down */
+}
+#carouselExample .carousel-item p {
+  font-family: 'Raleway', sans-serif;
+  text-align: right;
+}
+.d-block w-100 {
+text-align: left;
+}
+.carousel-item {
+  text-align: left; /* Move the image to the left */
 }
 
+#carouselExample .carousel-item img {
+  width: 50%; /* Adjust the width to make it smaller (you can use any percentage you prefer) */
+  margin-right: auto; /* Center the image within its container */
+  margin-left: auto;
+}
 /* ABOUT US */
 
 .logo-small {
