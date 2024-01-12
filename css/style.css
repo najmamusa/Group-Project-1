@@ -153,6 +153,11 @@ text-align: left;
   margin-right: auto; /* Center the image within its container */
   margin-left: auto;
 }
+
+/* map */
+.input-group h1 {
+  font-family: 'Playfair Display', serif;
+}
 /* ABOUT US */
 
 .logo-small {
