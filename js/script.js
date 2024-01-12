@@ -26,12 +26,14 @@ function updateCarousel(books) {
         }
         let carouselItem = $(`
             <div class="carousel-item ${isActive}">
-                <img src="${book.book_image}" class="d-block w-100" alt="${book.title}" />
-                <div class="carousel-caption d-none d-md-block">
+			<div class="d-flex">
+                <div><img src="${book.book_image}" class="d-block" alt="${book.title}" /></div>
+                <div>
                     <h5>${book.title}</h5>
                     <p>${book.description}</p>
                 </div>
             </div>
+			</div>
         `);
         carouselContainer.append(carouselItem);
     });

@@ -106,18 +106,18 @@ $("#book-search-form").submit(function (e) {
 });
 
 $(document).ready(function () {
-	function displaySearchHistory(searchHistory) {
-		let searchListItem = $(
-			'<ul class="list-group list-group-horizontal"></ul>'
-		);
-		searchHistory.forEach(function (searchTerm) {
-			searchListItem.append(
-				$('<li class="list-group-item"></li>').text(searchTerm)
-			);
-		});
+// 	function displaySearchHistory(searchHistory) {
+// 		let searchListItem = $(
+// 			'<ul class="list-group list-group-horizontal"></ul>'
+// 		);
+// 		searchHistory.forEach(function (searchTerm) {
+// 			searchListItem.append(
+// 				$('<li class="list-group-item"></li>').text(searchTerm)
+// 			);
+// 		});
 
-		$("#book-results").html(searchListItem);
-	}
+	// 	$("#book-results").html(searchListItem);
+	// }
 	let searchHistory =
 		JSON.parse(localStorage.getItem("bookSearchHistory")) || [];
 	displaySearchHistory(searchHistory);
